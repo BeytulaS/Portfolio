@@ -1,11 +1,4 @@
 "use client";
-import { info } from "console";
-import {
-  motion,
-  useTransform,
-  useMotionValue,
-  AnimatePresence,
-} from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { IoClose, IoInformation } from "react-icons/io5";

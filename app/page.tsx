@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import { FaLinkedin } from "react-icons/fa";
 import DotPattern from "./components/DotPattern";
 import Reveal from "./components/Reveal";

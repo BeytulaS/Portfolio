@@ -1,5 +1,4 @@
 "use client";
-
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
@@ -26,7 +25,7 @@ export default function Slide({
     } else {
       controls.start("hidden");
     }
-  }, [isInView]);
+  }, [isInView, controls]);
 
   return (
     <motion.div

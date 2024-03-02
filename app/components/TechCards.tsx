@@ -5,7 +5,6 @@ import {
   IoLogoReact,
 } from "react-icons/io5";
 import {
-  SiExpress,
   SiFirebase,
   SiNextdotjs,
   SiNodedotjs,

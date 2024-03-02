@@ -1,5 +1,4 @@
 "use client";
-
 import { Variant, motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
@@ -35,7 +34,6 @@ export const TypeReveal = ({
   el: Wrapper = "p",
   className,
   once,
-  repeatDelay,
   delay,
   animation = defaultAnimations,
 }: AnimatedTextProps) => {
@@ -60,7 +58,7 @@ export const TypeReveal = ({
     }
 
     return () => clearTimeout(timeout);
-  }, [isInView]);
+  }, [isInView, controls, delay]);
 
   return (
     <Wrapper className={className}>

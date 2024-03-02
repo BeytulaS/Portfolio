@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.link-animation::after {
+  content: "//";
+  position: absolute;
+  left: -15px;
+  transform: scaleY(0);
+  transition: all 0.15s ease-in-out 0s;
+  color: #34d399;
+}
+
+.link-animation:hover::after {
+  transform: scaleY(1);
+}
+
+.link-animation {
+  position: relative;
+  padding-left: 15px;
+}
+
+.pattern {
+  background-color: #1c1c1c00;
+  opacity: 1;
+  background-image: radial-gradient(
+    var(--dot-color, #d4d4d465) 2px,
+    #e6e5e500 2px
+  );
+  background-size: 40px 40px;
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { FaLinkedin } from "react-icons/fa";
-import DotPattern from "./components/DotPattern";
 import Reveal from "./components/Reveal";
 import { FaGithub } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
@@ -31,6 +30,14 @@ function Hero() {
       id="hero"
       className="fixed top-0 left-0 p-8 bg-neutral-950 overflow-hidden w-screen h-screen flex items-center justify-center -z-10"
     >
+      <Image
+        src="/bg.png"
+        alt="Bg"
+        width={1920}
+        height={1080}
+        className="absolute top-0 left-0 z-0 w-screen h-screen object-cover"
+      />
+      <div className="absolute top-0 left-0 z-0 w-screen h-screen transparent-radial" />
       <div className="max-w-3xl md:grid md:grid-cols-3 md:relative">
         <div className="md:py-16 md:col-start-1 md:col-end-3 ">
           <Reveal>
@@ -89,7 +96,6 @@ function Hero() {
           </div>
           <div className="absolute animate-float top-0 left-1/3 mb-10 z-10 text-4xl text-emerald-300 font-mono font-bold rotate-12"></div>
         </div>
-        <DotPattern />
       </div>
     </section>
   );

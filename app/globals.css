@@ -45,3 +45,14 @@
     transform: translateY(0px);
   }
 }
+
+.transparent-radial {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7861345221682423) 30%,
+    rgba(0, 0, 0, 0.5396358372450543) 70%,
+    rgba(0, 0, 0, 0.23151258794533436) 100%
+  );
+}

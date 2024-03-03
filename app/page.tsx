@@ -35,6 +35,9 @@ function Hero() {
         alt="Bg"
         width={1920}
         height={1080}
+        quality={60}
+        placeholder="blur"
+        blurDataURL="/bg.png"
         className="absolute top-0 left-0 z-0 w-screen h-screen object-cover"
       />
       <div className="absolute top-0 left-0 z-0 w-screen h-screen transparent-radial" />

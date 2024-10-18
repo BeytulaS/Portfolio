@@ -1,15 +1,20 @@
 "use client";
-import { type } from "os";
-import { createContext, useContext, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  Dispatch,
+  SetStateAction,
+} from "react";
 
-interface HoverContextType {
-  hoverState: { type: string | null };
-  setHoverState: (hoverState: { type: string | null }) => void;
-}
+type HoverState = { type: string | null };
 
-const HoverContext = createContext({
+const HoverContext = createContext<{
+  hoverState: HoverState;
+  setHoverState: Dispatch<SetStateAction<HoverState>>;
+}>({
   hoverState: { type: null },
-  setHoverState: (hoverState: { type: null | string }) => {},
+  setHoverState: () => {},
 });
 
 export function useHover() {
@@ -21,7 +26,7 @@ export function SmartCursorProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [hoverState, setHoverState] = useState({ type: null });
+  const [hoverState, setHoverState] = useState<HoverState>({ type: null });
 
   return (
     <HoverContext.Provider

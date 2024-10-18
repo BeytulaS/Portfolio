@@ -1,98 +1,108 @@
 "use client";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+
+const links = [
+  { text: "About", href: "#about" },
+  { text: "Projects", href: "#projects" },
+  { text: "Contact", href: "#contact" },
+];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  function scrollToSection(id: string) {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setMenuOpen(false);
+  if (pathname !== "/") {
+    return null;
   }
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    setMenuOpen(false);
-  }
-
-  useEffect(() => {
-    const scrollHandler = () => {
-      setScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener("scroll", scrollHandler);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", scrollHandler);
-    };
-  }, []);
 
   return (
     <nav
-      className={`fixed top-0 w-screen flex flex-col justify-center items-center md:px-24 z-50 overflow-hidden`}
+      className={`fixed top-0 w-screen flex flex-col justify-center items-center px-4 md:px-24 z-50 overflow-hidden mix-blend-difference`}
     >
       <div
-        className={` text-lg flex w-full max-w-6xl md:border-2 md:border-emerald-200 md:border-opacity-0   justify-between px-8 md:rounded-full ${
-          scrolled || menuOpen
-            ? "md:bg-black/50 bg-neutral-800/60 backdrop-blur-md py-2 md:mt-4 shadow-md md:border-opacity-40"
-            : "py-8 "
-        }  transition-all duration-150`}
+        className={` text-lg flex w-full max-w-[1500px] md:border-b-0 md:border-emerald-200  justify-between py-4 md:mt-4 bg-transparent transition-all duration-150`}
       >
-        <div className="font-mono cursor-pointer">
-          <a onClick={() => scrollToTop()} aria-label="Back to top">
-            BSS
-          </a>
-        </div>
-        <ul className="hidden md:flex links  gap-16 font-mono">
-          <li className="link-animation cursor-pointer">
-            <a onClick={() => scrollToSection("about")}>About</a>
-          </li>
-          <li className="link-animation cursor-pointer">
-            <a onClick={() => scrollToSection("projects")}>Projects</a>
-          </li>
-          <li className="link-animation cursor-pointer">
-            <a onClick={() => scrollToSection("contact")}>Contact</a>
-          </li>
+        <Logo />
+        <ul className="hidden md:flex links uppercase  gap-16 font-thunderLc text-3xl">
+          {links.map((link) => (
+            <li key={link.text}>
+              <LinkItem href={link.href} text={link.text} />
+            </li>
+          ))}
         </ul>
-        <button
-          type="button"
-          className="md:hidden menu-button flex flex-col items-center justify-center gap-2 max-h-7"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <div
-            className={`h-0.5 w-8 bg-white origin-center ${
-              menuOpen ? " rotate-[45deg] translate-y-[5px] " : "rotate-0"
-            } transition-all duration-150`}
-          />
-
-          <div
-            className={`h-0.5 w-8 bg-white origin-center ${
-              menuOpen ? " -rotate-45 -translate-y-[5px] " : "rotate-0"
-            } transition-all duration-150`}
-          />
-          <span className="sr-only">
-            {menuOpen ? "Close navigation" : "Open navigation"}
-          </span>
-        </button>
+        <MenuButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </div>
-      <div
-        className={`mobile-links bg-neutral-800/60  backdrop-blur-md h-0 md:hidden w-full  ${
-          menuOpen ? "h-36 border-b-2 border-emerald-700" : ""
-        } transition-all duration-300`}
-      >
-        <ul className="flex flex-col items-center gap-4 font-mono w-full py-4 ">
-          <li className="link-animation cursor-pointer">
-            <a onClick={() => scrollToSection("about")}>About</a>
-          </li>
-          <li className="link-animation cursor-pointer">
-            <a onClick={() => scrollToSection("projects")}>Projects</a>
-          </li>
-          <li className="link-animation cursor-pointer">
-            <a onClick={() => scrollToSection("contact")}>Contact</a>
-          </li>
-        </ul>
-      </div>
+      <MobileMenu menuOpen={menuOpen} />
     </nav>
+  );
+}
+
+function LinkItem({ href, text }: { href: string; text: string }) {
+  return (
+    <a href={href} className="cursor-pointer hover:text-shadow-sm">
+      {text}
+    </a>
+  );
+}
+
+function MenuButton({
+  menuOpen,
+  setMenuOpen,
+}: {
+  menuOpen: boolean;
+  setMenuOpen: (open: boolean) => void;
+}) {
+  return (
+    <button
+      type="button"
+      className="md:hidden menu-button flex flex-col items-center justify-center gap-2 max-h-7 z-50"
+      onClick={() => setMenuOpen(!menuOpen)}
+    >
+      <div
+        className={`h-0.5 w-8 bg-white origin-center ${
+          menuOpen ? " rotate-[45deg] translate-y-[5px] " : "rotate-0"
+        } transition-all duration-150`}
+      />
+
+      <div
+        className={`h-0.5 w-8 bg-white origin-center ${
+          menuOpen ? " -rotate-45 -translate-y-[5px] " : "rotate-0"
+        } transition-all duration-150`}
+      />
+      <span className="sr-only">
+        {menuOpen ? "Close navigation" : "Open navigation"}
+      </span>
+    </button>
+  );
+}
+
+function Logo() {
+  return (
+    <a
+      href="#hero"
+      aria-label="Back to top"
+      className="font-thunderLc cursor-pointer  text-3xl difference z-50"
+    >
+      BSS
+    </a>
+  );
+}
+
+function MobileMenu({ menuOpen }: { menuOpen: boolean }) {
+  return (
+    <div
+      className={`fixed top-0 right-0 mobile-links bg-slate-800  overflow-hidden w-full  md:hidden   ${
+        menuOpen ? "h-48 border-b-2 border-yellowBright" : "h-0"
+      } transition-all duration-300`}
+    >
+      <ul className="flex place-content-end gap-4 font-thunderLc text-3xl w-full mt-36 px-8">
+        {links.map((link) => (
+          <li key={link.text}>
+            <LinkItem href={link.href} text={link.text} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

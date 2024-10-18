@@ -12,14 +12,20 @@ import HobbyCards from "./components/HobbyCards";
 import Slide from "./components/Slide";
 import ContactForm from "./components/ContactForm";
 import ProjectsCarousel from "./components/ProjectsCarousel";
+import NewHero from "./components/NewHero";
+import CaseStudiesSection from "./components/CaseStudiesSection";
+import AboutMe from "./components/AboutMeSection";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <main className="">
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
+      <NewHero />
+      <CaseStudiesSection />
+      {/*  <About /> */}
+      <AboutMe />
+      {/* <Contact /> */}
+      <Footer />
     </main>
   );
 }
@@ -238,8 +244,6 @@ function Contact() {
             </div>
           </div>
         </div>
-
-        <ContactForm />
 
         <div className="md:hidden">
           <p className="text-lg">Or get in touch here</p>

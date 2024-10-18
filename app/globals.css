@@ -2,13 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  cursor: crosshair;
+}
+
 .link-animation::after {
   content: "//";
   position: absolute;
   left: -15px;
   transform: scaleY(0);
   transition: all 0.15s ease-in-out 0s;
-  color: #34d399;
+  color: #ffdc18;
 }
 
 .link-animation:hover::after {
@@ -55,4 +67,45 @@
     rgba(0, 0, 0, 0.5396358372450543) 70%,
     rgba(0, 0, 0, 0.23151258794533436) 100%
   );
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+
+  .custom-shadow {
+    -webkit-box-shadow: -8px -8px 0px 0px #fee715;
+    -moz-box-shadow: -8px -8px 0px 0px #fee715;
+    box-shadow: -8px -8px 0px 0px #fee715;
+  }
+
+  .button-shadow {
+    box-shadow: 6px 6px 0px 0px #fee715;
+  }
+
+  .shadow-charcoal {
+    box-shadow: 4px 4px 0px 0px #101820, -4px -4px 0px 0px #101820;
+  }
+
+  .text-shadow {
+    text-shadow: 4px 4px 0px #fee715;
+  }
+
+  .text-shadow-sm {
+    text-shadow: 2px 2px 1px #fee715;
+  }
+
+  .text-shadow-blue {
+    text-shadow: 4px 4px 0px #1d00b4;
+  }
+
+  .text-shadow-charcoal {
+    text-shadow: 2px 2px 0px #101820;
+  }
+
+  .responsive-text-xl {
+    font-size: clamp(7.5rem, 15vw, 15rem);
+    line-height: auto;
+  }
 }

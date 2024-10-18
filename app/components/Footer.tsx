@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="max-w-[1500px] mx-auto flex flex-col justify-center h-full">
           <h2 className="text-transparent text-shadow uppercase font-thunderSemibold text-5xl md:text-8xl lg:text-9xl overflow-clip">
             <FooterReveal delay={0.6}>
-              <span>Let's work together</span>
+              <span>{"Let's work together"}</span>
             </FooterReveal>
           </h2>
           <div className="w-full border-y border-white py-8 flex flex-col lg:flex-row gap-8 lg:gap-24 mt-24">

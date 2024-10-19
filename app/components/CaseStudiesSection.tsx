@@ -13,7 +13,7 @@ export default function CaseStudiesSection() {
       <RevealSection>
         <div className=" w-full bg-[#fafafa] text-charcoal px-4 md:px-24 py-12 ">
           <div className="max-w-[1500px] mx-auto">
-            <h2 className="font-thunderSemibold text-6xl  uppercase overflow-clip mb-12">
+            <h2 className="font-thunderSemibold text-6xl  uppercase overflow-clip my-12">
               <TextReveal>
                 <span>My Work</span>
               </TextReveal>

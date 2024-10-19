@@ -6,6 +6,8 @@ import localFont from "next/font/local";
 import { SmartCursorProvider } from "./providers/SmartCursorProvider";
 import { Suspense } from "react";
 import Loading from "./loading";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const mono = Source_Code_Pro({ subsets: ["latin"], variable: "--font-mono" });
@@ -79,6 +81,8 @@ export default function RootLayout({
             {children}
           </Suspense>
         </SmartCursorProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

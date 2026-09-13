@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@source "../../../content/**/*";
+
+@theme static {
+  --font-sans: 'Public Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Bricolage Grotesque', 'Public Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+}
+
+:root {
+  --ui-container: var(--container-5xl);
+  --ui-radius: 0.5rem;
+
+  /* Light theme: paper-white with a faint green cast */
+  --ui-bg: #f7f9f7;
+  --ui-bg-muted: #eef3ef;
+  --ui-bg-elevated: #e6ede8;
+  --ui-bg-accented: #dbe5de;
+  --ui-border: #d7e1da;
+  --ui-border-muted: #e2eae4;
+  --ui-border-accented: #c6d3ca;
+
+  --ui-text-dimmed: #8b9a91;
+  --ui-text-muted: #64756b;
+  --ui-text-toned: #44554b;
+  --ui-text: #26372e;
+  --ui-text-highlighted: #0c1712;
+
+  ::selection {
+    color: #04241a;
+    background-color: #a7f3d0;
+  }
+}
+
+.dark {
+  /* Dark theme: pine ink, not pure black */
+  --ui-bg: #070c0a;
+  --ui-bg-muted: #0d1512;
+  --ui-bg-elevated: #111b16;
+  --ui-bg-accented: #17241d;
+  --ui-border: #1e2c25;
+  --ui-border-muted: #16221c;
+  --ui-border-accented: #29392f;
+
+  --ui-text-dimmed: #5d6f66;
+  --ui-text-muted: #8ba095;
+  --ui-text-toned: #b3c5bb;
+  --ui-text: #d3dfd8;
+  --ui-text-highlighted: #f1f7f3;
+
+  ::selection {
+    color: #04140e;
+    background-color: #34d399;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Faint dot grid, used as an ambient background */
+@utility bg-grid {
+  background-image: radial-gradient(circle at 1px 1px, var(--ui-border) 1px, transparent 0);
+  background-size: 30px 30px;
+}
+
+/* Soft emerald bloom from the top of the page */
+@utility bg-bloom {
+  background-image: radial-gradient(55% 50% at 50% 0%, rgba(52, 211, 153, 0.13), transparent 72%);
+}
+
+/* Monospace section eyebrow: ~/about */
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  color: var(--ui-text-muted);
+}

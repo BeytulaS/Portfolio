@@ -1,0 +1,153 @@
+seo:
+  title: "Beytula Smail — Full-Stack Developer"
+  description: "Full-stack developer in Sofia, Bulgaria. I build and ship web products end to end with Nuxt, Next.js, TypeScript and PostgreSQL — cloud platforms at DEVA Broadcast and my own SaaS, Dishboard."
+
+title: "I build and ship web products end to end."
+description: "I'm Beytula Smail, a full-stack developer based in Sofia, Bulgaria. I work across the whole stack — Nuxt and Next.js on the front, Elysia.js, Flask and PostgreSQL behind it — and I like owning a feature from the first sketch to production."
+
+hero:
+  eyebrow: "~/beytula $ whoami"
+  links:
+    - label: "View selected work"
+      to: /projects
+      color: primary
+      trailingIcon: i-lucide-arrow-right
+  images:
+    - src: /portfolio/dishboard-sq.webp
+      alt: Dishboard digital menu builder
+    - src: /portfolio/storeplayer-sq.webp
+      alt: StorePlayer.cloud broadcast dashboard
+    - src: /portfolio/knacks-sq.webp
+      alt: knacks terminal interface
+    - src: /portfolio/top-bikini-sq.webp
+      alt: Top Bikini ecommerce store
+    - src: /portfolio/toraban-sq.webp
+      alt: Toraban kanban board
+    - src: /portfolio/bevelo-sq.webp
+      alt: Bevelo Web studio site
+
+about:
+  title: "About"
+  description: |
+    I started out building interfaces and ended up happiest owning the whole feature. Day to day that means Vue and Nuxt on the front, TypeScript services and SQL behind them, and enough Docker and Linux to ship without waiting on someone else.
+
+    I care about the boring parts: fast pages, clean data, and software that still works a year later. Lately I've been leaning on AI tooling to move faster without skipping the fundamentals.
+  stats:
+    - value: "10+"
+      label: "hospitality venues running Dishboard"
+    - value: "3+"
+      label: "years shipping production web apps"
+
+experience:
+  title: "Experience"
+  description: "Where I've been building."
+  items:
+    - date: "12/2024 — Present"
+      position: "Web Developer / Full-Stack Engineering & Cloud Platforms"
+      company:
+        name: DEVA Broadcast
+        url: https://devabroadcast.com
+        logo: i-lucide-radio-tower
+        color: "#38bdf8"
+      summary: "Cloud SaaS and system tooling for next-generation broadcast hardware."
+      highlights:
+        - "Co-develop cloud SaaS applications, including storeplayer.cloud, in a lean engineering team — owning features end to end through integration and maintenance."
+        - "Moved from specialised frontend work in Vue and Nuxt into full-stack: backends and microservices with Elysia.js (TypeScript), Flask, Docker and PostgreSQL."
+        - "Built web interfaces and system management layers (REST APIs, SNMP, Linux kernel configuration) for broadcast products."
+    - date: "01/2026 — Present"
+      position: "Founder & Full-Stack Developer"
+      company:
+        name: Dishboard
+        url: https://dishboard.eu
+        logo: i-lucide-utensils
+        color: "#fb923c"
+      summary: "A SaaS digital menu builder for hospitality."
+      highlights:
+        - "Launched and scaled a digital menu builder now powering live menus for 10+ active hospitality venues in Bulgaria."
+        - "Built the product end to end on Next.js, Convex, Vercel and PostHog for real-time analytics."
+        - "Shipped an AI and OCR pipeline that extracts menus from photos and PDFs, plus multi-language translation and a visual WYSIWYG theme editor."
+    - date: "06/2024 — Present"
+      position: "Freelance Web Developer"
+      company:
+        name: Bevelo Web
+        logo: i-lucide-globe
+        color: "#a78bfa"
+      summary: "Websites for small businesses, from the first call to launch."
+      highlights:
+        - "Lead the full web development process, from initial consultation through to launch."
+        - "Build custom CMS solutions, including WordPress and WooCommerce, so clients can manage their own content."
+        - "Ship SEO-friendly, high-performance sites and support them with ongoing marketing and SEO work."
+
+education:
+  title: "Education"
+  description: "The formal part."
+  items:
+    - date: "2021 — 2023"
+      degree: "JS Web Developer"
+      school: "Software University (SoftUni)"
+    - date: "2014 — 2019"
+      degree: "High School Diploma — Banking, Corporate, Finance & Securities Law"
+      school: "High School of Economics, Burgas"
+
+skills:
+  title: "Stack & tools"
+  description: "What I reach for, roughly in order of how often I touch it."
+  groups:
+    - title: "Languages"
+      icon: i-lucide-code
+      items:
+        - TypeScript
+        - JavaScript
+        - Go
+        - Python
+        - SQL
+        - HTML & CSS
+    - title: "Frontend"
+      icon: i-lucide-layout-dashboard
+      items:
+        - Vue.js
+        - Nuxt
+        - React
+        - Next.js
+        - Tailwind CSS
+        - Nuxt UI
+        - Motion
+    - title: "Backend"
+      icon: i-lucide-server
+      items:
+        - Elysia.js
+        - Node.js
+        - Flask
+        - REST APIs
+        - Microservices
+    - title: "Data"
+      icon: i-lucide-database
+      items:
+        - PostgreSQL
+        - Convex
+        - Supabase
+        - Firebase
+    - title: "Cloud & Ops"
+      icon: i-lucide-cloud
+      items:
+        - Docker
+        - Vercel
+        - Linux & kernel config
+        - SNMP
+        - Git & CI
+    - title: "Also"
+      icon: i-lucide-sparkles
+      items:
+        - WordPress & WooCommerce
+        - SEO
+        - AI / OCR pipelines
+        - PostHog
+
+work:
+  title: "Selected work"
+  description: "A few products I've designed, built and shipped — a live SaaS, an ecommerce store, an open-source developer tool and a couple of side projects."
+
+contact:
+  title: "Let's build something."
+  description: "I'm open to freelance projects and full-time roles where I can own features end to end. The fastest way to reach me is email."
+  email: "beytula.smail@gmail.com"

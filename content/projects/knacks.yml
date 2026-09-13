@@ -1,0 +1,14 @@
+title: knacks
+description: "An open-source terminal UI and CLI for managing AI agent skills. It discovers skills across project and global roots, enables or disables them without deleting files, moves them between scopes and installs new ones from any GitHub repo or skills.sh."
+image: /portfolio/knacks.webp
+url: https://github.com/BeytulaS/knacks
+repo: https://github.com/BeytulaS/knacks
+role: Creator & Maintainer
+status: Open source
+featured: true
+tags:
+  - Go
+  - CLI
+  - TUI
+  - Developer tooling
+date: "2026-09-01"

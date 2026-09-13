@@ -1,0 +1,14 @@
+title: StorePlayer.cloud
+description: "Cloud control and monitoring for in-store broadcast audio: device fleet management, playlists, licensing and remote configuration for hardware deployed across customer sites. Built with the engineering team at DEVA Broadcast."
+image: /portfolio/storeplayer.webp
+url: https://storeplayer.cloud
+role: Full-Stack Developer at DEVA Broadcast
+status: Live
+featured: true
+tags:
+  - Nuxt
+  - Elysia.js
+  - PostgreSQL
+  - Docker
+  - SNMP
+date: "2024-12-01"

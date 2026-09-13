@@ -1,0 +1,14 @@
+title: Dishboard
+description: "A SaaS digital menu builder that lets restaurants publish a branded QR menu in minutes — with an AI and OCR pipeline that turns photos and PDFs into structured dishes, multi-language translation and a visual WYSIWYG theme editor."
+image: /portfolio/dishboard.webp
+url: https://dishboard.eu
+role: Founder & Full-Stack Developer
+status: Live
+featured: true
+tags:
+  - Next.js
+  - Convex
+  - TypeScript
+  - PostHog
+  - AI / OCR
+date: "2026-01-01"

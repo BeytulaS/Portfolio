@@ -1,0 +1,12 @@
+title: "Things I've built"
+description: "Case studies from the last couple of years — a live SaaS, an ecommerce store, an open-source developer tool and a few side projects. Everything here shipped to real users."
+links:
+  - label: "Email me"
+    icon: i-lucide-mail
+    color: primary
+    to: "mailto:beytula.smail@gmail.com"
+  - label: "GitHub"
+    icon: i-simple-icons-github
+    color: neutral
+    to: "https://github.com/BeytulaS"
+    target: "_blank"

@@ -1,0 +1,13 @@
+title: Toraban
+description: "A kanban task manager for planning work without the clutter. Drag-and-drop boards with real-time sync, built as a focused alternative to heavyweight project tools."
+image: /portfolio/toraban.webp
+url: https://toraban.vercel.app
+repo: https://github.com/BeytulaS/Toraban
+role: Creator
+status: Side project
+tags:
+  - React
+  - Supabase
+  - Tailwind CSS
+  - dnd-kit
+date: "2024-01-01"

@@ -1,0 +1,12 @@
+title: Top Bikini
+description: "A fully custom ecommerce store built from scratch for a swimwear brand — product catalogue, shopping cart and checkout, designed for fast browsing and simple merchandising."
+image: /portfolio/top-bikini.webp
+role: Designer & Developer
+status: Archived
+featured: true
+tags:
+  - Next.js
+  - Supabase
+  - PostgreSQL
+  - Tailwind CSS
+date: "2024-06-01"
